@@ -1,0 +1,13 @@
+<div class="s1">
+<div class="sign_up">
+<h1>サインアップ</h1>
+<%= form_tag("/sign_up") do%>
+  <p>ユーザー名<input name="name"></p>
+  <p>E-mail<input name="email"></p>
+  <p>パスワード<input name="password"></p>
+  <p><input type="submit" value="サインアップ" id="button"></p>
+<% end %>
+<p class="new_user">アカウントをお持ちの方</p>
+<p class="login_link"><%= link_to("ログイン画面へ", "/login")%></p>
+</div>
+</div>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<% current_user = User.find_by(id: session[:user_id])%>
+<html>
+  <head>
+    <title>BooksReviewApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/header'%>
+  </head>
+
+  <body>
+    <% if flash[:notice]%>
+      <div class="time-limit" id="notice">
+        <%= flash[:notice]%>
+      </div>
+    <% end %>
+
+    <% if flash[:danger]%>
+      <div class="time-limit" id="danger">
+        <%= flash[:danger]%>
+      </div>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

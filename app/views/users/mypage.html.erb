@@ -1,0 +1,23 @@
+<div class="my_review">
+
+<h1><%= @user.name %></h1>
+
+<p class="like">
+  <%= link_to("マイレビュー", "/mypage/#{@current_user.id}", {class:"button-3"})%>
+  <%= link_to("お気に入り", "/like/#{@current_user.id}", {class:"button-11"})%>
+</p>
+
+
+  <% if @posts%>
+    <% @posts.each do |post|%>
+      <div class="box26">
+        <span class="box-title">『<%= post.title %>』　著者：<%= post.author %></span>
+            <p><%= post.review %></p><br>
+            <p id="evaluation">評価:<%= post.evaluation %>
+            <%= link_to("削除", "/destroy/#{post.id}", {method: :post, class:"button-11"})%>
+            <%= link_to("投稿", "/share/#{post.id}", {method: :post, class:"button-2"})%></p>
+      </div>
+    <% end %>
+  <% end %>
+
+</div>

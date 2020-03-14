@@ -1,0 +1,23 @@
+<header class="header-3">
+  <div class="header-inner">
+    <div class="logo">
+      <%= image_tag('logo.png')%>
+    </div>
+    <nav class="header-nav">
+      <% if @current_user %>
+      <div class="header-nav-item">
+        <%= link_to("レビューを書く", "/new/#{@current_user.id}", {class: "header-button header-post"})%>
+      </div>
+      <div class="header-nav-item">
+        <%= link_to("#{@current_user.name}", "/mypage/#{@current_user.id}", {class: "header-button header-login"})%>
+      </div>
+      <div class="header-nav-item">
+        <%= link_to("タイムライン", "/index/#{@current_user.id}", {class: "header-button header-login"})%>
+      </div>
+      <div class="header-nav-item">
+        <%= link_to("ログアウト", "/logout" ,{method: :post, class: "header-button header-login"})%>
+      </div>
+      <% end %>
+    </nav>
+  </div>
+</header>

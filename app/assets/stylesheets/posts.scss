@@ -1,0 +1,75 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.add_review {
+  position: absolute;
+  top: 120px;
+  left: 530px;
+}
+
+.form1-input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  margin: 5px 0;
+  font-size: 16px;
+  color: #333;
+  border: solid 1px #ccc;
+  border-radius: 6px;
+  outline: 0;
+  transition: 0.3s;
+  -webkit-appearance: none;
+}
+
+.form1-input:focus {
+  border: 1px solid #00b5ad;
+}
+
+.button-11 {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #00b5ad;
+  text-decoration: none;
+  user-select: none;
+}
+
+.button-11:hover {
+  opacity: 0.5;
+}
+
+.button-4 {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: #00b5ad;
+  border: 1px #00b5ad solid;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+}
+
+.button-4:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+.button-2 {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8rem;
+  color: #00b5ad;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #00b5ad solid;
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+
+.button-2:hover {
+  color: #fff;
+  background: #00b5ad;
+}

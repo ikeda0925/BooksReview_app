@@ -1,0 +1,21 @@
+<div class="my_review">
+  <%= form_tag("/search", {method: :get}) do %>
+    <input class="form1-input" type="text" name="search" placeholder="作品名または著者名で検索">
+    <input class="button-1" type="submit" value="検索">
+  <% end %>
+<h3>”<%= @text%>”の検索結果</h3>
+
+  <% @search.each do |search|%>
+    <% @shares.each do |share|%>
+      <% if share.posts_id == search.id then %>
+        <div class="box26">
+        <span class="box-title">『<%= search.title %>』　著者：<%= search.author %></span>
+          <p><%= search.review %></p><br>
+          <p id="evaluation">評価:<%= search.evaluation %>
+            <% if @current_user.id != search.user_id then %>
+             <%= link_to("いいね", "/like/#{search.id}", {method: :post, class:"button-2"})%></p>
+            <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>

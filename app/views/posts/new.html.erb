@@ -1,0 +1,17 @@
+<div class="add_review">
+<h1>レビュー追加</h1>
+<%= form_tag("/create/#{@current_user.id}") do %>
+  <p id="title">タイトル</p><input name="title" class="form1-input">
+  <p id="author">著者</p><input name="author" class="form1-input">
+  <p id="review">レビュー</p><textarea name="review" cols="30" class="form1-input"></textarea>
+  <p id="evaluation">評価</p>
+    <select name="evaluation">
+      <option value="5">5</option>
+      <option value="4">4</option>
+      <option value="3">3</option>
+      <option value="2">2</option>
+      <option value="1">1</option>
+    </select>
+  <p><input type="submit" value="保存" class="button-4"></p>
+<% end %>
+</div>
